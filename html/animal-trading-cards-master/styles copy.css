@@ -1,0 +1,48 @@
+body {
+    color: white;
+    background-color: black;
+    font-size: 11px;
+    border-style: solid;
+    border-width: 1px;
+    border-right: outset 5px lightgray;
+    border-bottom: outset 5px lightgray;
+    border-color: lightgray;
+    margin: 10px 10px 10px 10px;
+    width: 320px;
+    height: 470px;
+}
+
+#huron {
+    width: 300px;
+    padding: 10px;
+}
+
+.ifact {
+    font-style: italic;
+}
+
+.label {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.box {
+    width: 280px;
+    padding: 3px 10px 10px 10px;
+    height: 180px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    margin: 0px 10px 0px 10px;
+
+}
+
+h2 {
+    padding: 0px 0px 0px 10px ;
+    color: white;
+}
