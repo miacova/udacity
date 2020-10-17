@@ -1,5 +1,6 @@
 import time
 import random
+pausa = 1
 
 
 def choose():
@@ -10,20 +11,21 @@ def choose():
     return question
 
 
+def print_pause(story):
+    print(story)
+    time.sleep(pausa)
+
+
 def start():
     print()
     print_pause("You find yourself standing in an open field,")
     ("filled with grass and yellow wildflowers.")
-    time.sleep(1)
-    print("Rumor has it that a " + danger + " is somewhere around here,")
+    print_pause("Rumor has it that a " + danger + " is somewhere around here,")
     ("and has been terrifying the nearby village.")
-    time.sleep(1)
-    print("In front of you is a house.")
-    time.sleep(1)
-    print("To your right is a dark cave.")
-    time.sleep(1)
-    print("In your hand you hold your trusty (but not very effective) dagger.")
-    time.sleep(1)
+    print_pause("In front of you is a house.")
+    print_pause("To your right is a dark cave.")
+    print_pause("In your hand you hold your trusty")
+    ("(but not very effective) dagger.")
     print()
     print("Enter 1 to knock on the door of the house.")
     print("Enter 2 to peer into the cave.")
@@ -31,120 +33,88 @@ def start():
 
 def house(danger):
     time.sleep(1)
-    print("You approach the door of the house.")
-    time.sleep(1)
-    print("You are about to knock when the door opens")
+    print_pause("You approach the door of the house.")
+    print_pause("You are about to knock when the door opens")
     ("and out steps a " + danger + ".")
-    time.sleep(1)
-    print("Eep! This is the " + danger + "'s house!")
-    time.sleep(1)
-    print("The " + danger + " attacks you!")
-    time.sleep(1)
-    print("You feel a bit under-prepared for this,")
+    print_pause("Eep! This is the " + danger + "'s house!")
+    print_pause("The " + danger + " attacks you!")
+    print_pause("You feel a bit under-prepared for this,")
     ("what with only having a tiny dagger.")
-    time.sleep(1)
     print("Enter 1 to fight.")
-    time.sleep(1)
     print("Enter 2 to run away.")
     time.sleep(1)
 
 
 def house_con_espada(danger):
     time.sleep(1)
-    print("You approach the door of the house.")
-    time.sleep(1)
-    print("You are about to knock when the door")
+    print_pause("You approach the door of the house.")
+    print_pause("You are about to knock when the door")
     ("opens and out steps a " + danger + ".")
-    time.sleep(1)
-    print("Eep! This is the " + danger + "'s house!")
-    time.sleep(1)
-    print("The " + danger + " attacks you!")
-    time.sleep(1)
+    print_pause("Eep! This is the " + danger + "'s house!")
+    print_pause("The " + danger + " attacks you!")
     print("Enter 1 to fight.")
-    time.sleep(1)
     print("Enter 2 to run away.")
     time.sleep(1)
 
 
 def fight_sin_espada(danger):
     time.sleep(1)
-    print("You do your best...")
-    time.sleep(1)
-    print("but your dagger is no match for the " + danger + ".")
-    time.sleep(1)
+    print_pause("You do your best...")
+    print_pause("but your dagger is no match for the " + danger + ".")
     print("You have been defeated!")
-    print("GAME OVER")
-    time.sleep(1)
+    print_pause("GAME OVER")
     print("Would you like to play again? (1 for yes/2 for no)")
     # Things that happen when the player fights without a sword
 
 
 def fight_con_espada(danger):
     print()
-    print("As the " + danger + " moves to attack,")
+    print_pause("As the " + danger + " moves to attack,")
     ("you unsheath your new sword.")
-    time.sleep(1)
-    print("The Sword of Ogoroth shines brightly in")
+    print_pause("The Sword of Ogoroth shines brightly in")
     ("your hand as you brace yourself for the attack.")
-    time.sleep(1)
-    print("But the " + danger + " takes one look at your")
+    print_pause("But the " + danger + " takes one look at your")
     ("shiny new toy and runs away!")
-    time.sleep(1)
-    print("You have rid the town of the " + danger + ". You are victorious!")
-    time.sleep(1)
+    print_pause("You have rid the town of the " + danger + ".")
+    ("You are victorious!")
     print("Would you like to play again? (1 for yes/2 for no)")
     # Things that happen to the player in the house
 
 
 def start_con_espada():
-    print("You walk back out to the field.")
-    time.sleep(1)
-    print("Enter 1 to knock on the door of the house.")
-    time.sleep(1)
-    print("Enter 2 to peer into the cave.")
-    time.sleep(1)
+    print_pause("You walk back out to the field.")
+    print_pause("Enter 1 to knock on the door of the house.")
+    print_pause("Enter 2 to peer into the cave.")
     print("(Please enter 1 or 2.)")
 
 
 def cave_sin_espada():
     print()
-    print("You peer cautiously into the cave.")
-    time.sleep(1)
-    print("It turns out to be only a very small cave.")
-    time.sleep(1)
-    print("Your eye catches a glint of metal behind a rock.")
-    time.sleep(1)
-    print("You have found the magical Sword of Ogoroth!")
-    time.sleep(1)
-    print("You discard your silly old dagger and take the sword with you.")
-    time.sleep(1)
-    print("You walk back out to the field.")
-    time.sleep(1)
-    print("Enter 1 to knock on the door of the house.")
-    time.sleep(1)
-    print("Enter 2 to peer into the cave.")
-    time.sleep(1)
+    print_pause("You peer cautiously into the cave.")
+    print_pause("It turns out to be only a very small cave.")
+    print_pause("Your eye catches a glint of metal behind a rock.")
+    print_pause("You have found the magical Sword of Ogoroth!")
+    print_pause("You discard your silly old dagger and")
+    ("take the sword with you.")
+    print_pause("You walk back out to the field.")
+    print_pause("Enter 1 to knock on the door of the house.")
+    print_pause("Enter 2 to peer into the cave.")
     print("(Please enter 1 or 2.)")
     # Things that happen to the player goes in the cave without the sword
 
 
 def cave_con_espada():
     print()
-    print("You peer cautiously into the cave.")
-    time.sleep(1)
-    print("You've been here before, and gotten all the good stuff.")
+    print_pause("You peer cautiously into the cave.")
+    print_pause("You've been here before, and gotten all the good stuff.")
     ("It's just an empty cave now.")
-    time.sleep(1)
 
 
 def start_sin_espada():
     print()
-    print("You walk back out to the field.")
-    time.sleep(1)
-    print("Enter 1 to knock on the door of the house.")
-    time.sleep(1)
-    print("Enter 2 to peer into the cave.")
-    time.sleep(1)
+    print_pause("You walk back out to the field.")
+    print_pause("Enter 1 to knock on the door of the house.")
+    print_pause("Enter 2 to peer into the cave.")
     print("(Please enter 1 or 2.)")
 
 
